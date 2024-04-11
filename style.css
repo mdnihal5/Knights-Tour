@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.scoreboard {
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease-in-out;
+}
+.white {
+  background-color: #fff;
+  color: black;
+}
+.black {
+  background-color: #000;
+  color: black;
+}
+.cell.visited {
+  background-color:rgba(123, 223, 160, 0.42);
+  border: 1px solid black !important;
+}
+#stats {
+  background-color: #fff;
+  box-shadow: 0 4px 8px gray;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#stats:hover {
+  box-shadow: 0 15px  15px gray;
+}
+#stats p {
+  margin: 10px;
+  color: #000000;
+  font-size: 1.2rem;
+}
+#board {
+  width: 450px;
+  height: 450px;
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.cell:hover .piece {
+  transform: scale(1.1);
+}
+#stats button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#stats button:hover {
+  background-color: #246fa1;
+}
